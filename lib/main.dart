@@ -6,8 +6,8 @@ void main(){
 
   void streamYayin() async{
     for(int i=0; i<10; i++){
-      if(i==6){_streamController.addError('bir hata oluştu');}
-      await Future.delayed(Duration(seconds: 1));
+      if(i==16){_streamController.addError('bir hata oluştu');}
+      await Future.delayed(Duration(seconds: 3));
       _streamController.sink.add(i+1);
     }
     _streamController.close();
